@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos Educativos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <button onclick="alterarJogo()">Alterar Jogo</button>
+
+        <div id="memory-game-container" style="display: none;">
+            <div id="memory-game">
+                <div id="game-board"></div>
+                <div id="level-display">Nível: <span id="current-level">1</span></div>
+                <button onclick="proximoNivel()">Próximo Nível</button>
+            </div>
+        </div>
+
+        <div id="guessing-game-container" style="display: none;">
+            <div id="guessing-game">
+                <p id="guessing-game-hint"></p>
+                <input type="text" id="guess-input" placeholder="Digite sua resposta">
+                <button onclick="verificarResposta()">Verificar Resposta</button>
+                <p id="guess-feedback"></p>
+                <button onclick="proximaDica()">Próxima Dica</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="memory-game.js"></script>
+    <script src="guessing-game.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
